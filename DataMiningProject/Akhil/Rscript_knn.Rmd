@@ -1,0 +1,193 @@
+---
+title: "k_means_app_Data"
+author: "Akhil Gupta"
+date: "May 7, 2017"
+output: word_document
+---
+
+```{r setup}
+
+#install.packages("shiny")
+#install.packages("GGally")
+#install.packages("mice")
+
+library(plotly)
+
+library(shiny)
+library(dummies) 
+library(ggplot2) 
+library(caret) 
+## Loading required package: lattice 
+library(MASS) 
+library(tree) 
+library(ISLR) 
+library(cluster) 
+library(fpc) 
+library(arules) 
+library(arulesViz)
+
+getwd();
+setwd("C:/Users/gupta/DataMiningProject")
+#data<-read.csv(file="app_metadata_cleaned.csv", header=TRUE)
+data<-read.csv(file="app_metadata_cleaned_removed_min_downloads_above_5m.csv", header=TRUE)
+summary(data)
+
+data$CATEGORY <- as.factor(data$CATEGORY)
+data$PRICE <- as.numeric(data$PRICE)
+data$CONTENT_RATING <- as.factor(data$CONTENT_RATING)
+data$DOWNLOAD_MIN <- as.numeric(data$DOWNLOAD_MIN)
+data$DOWNLOAD_MAX <- as.numeric(data$DOWNLOAD_MAX)
+data$SIZE_MEGABYTES <- as.numeric(data$SIZE_MEGABYTES)
+data$MIN_REQ_ANDROID_FIRST <- as.factor(data$MIN_REQ_ANDROID_FIRST)
+data$TOTAL_REVIEWS <- as.numeric(data$TOTAL_REVIEWS)
+data$AVERAGE_RATING <- as.numeric(data$AVERAGE_RATING)
+data$X5RATING <- as.numeric(data$X5RATING)
+data$X4RATING <- as.numeric(data$X4RATING)
+data$X3RATING <- as.numeric(data$X3RATING)
+data$X2RATING <- as.numeric(data$X2RATING)
+data$X1RATING <- as.numeric(data$X1RATING)
+data$spam <- as.factor(data$spam)
+
+library(mice)
+
+num.vars <- sapply(data, is.numeric)
+
+#data[num.vars] <- lapply(data[num.vars], scale)  #scale the dataset
+
+Data <- data
+
+Data$APP_ID <- NULL
+Data$APP_NAME <- NULL
+Data$DOWNLOADS <- NULL
+Data$CURRENT_VERSION <- NULL
+Data$LASTUPDATED <- NULL
+Data$DEVELOPER_SITE <- NULL
+Data$DEVELOPER_CONTACT <- NULL
+Data$DEVELOPER_NAME <- NULL
+Data$MIN_REQUIRED_ANDROID <- NULL
+
+
+set.seed(123457)
+
+library(dummies)
+
+Data <- dummy.data.frame(Data, sep = ".", names = c("CATEGORY","CONTENT_RATING","MIN_REQ_ANDROID_FIRST"))
+
+train <- sample(nrow(Data), .7 * nrow(Data))
+df_train <- Data[train,]
+df_validation <- Data[-train, ]
+
+train_input <- as.matrix(df_train[,-15])
+train_output <- as.vector(df_train[,15])
+validate_input <- as.matrix(df_validation[,-15])
+
+set.seed(12345)
+
+
+#library(ggplot2)
+ggplot(Data, aes(DOWNLOAD_MIN, PRICE, color = spam)) + geom_point() #plotting price vs download with clusters
+
+##############  kmeans #######################
+metadata_knn<-function(k,ns){
+  
+  km.out<-kmeans(Data,k, nstart=ns)
+  km.out$centers
+  Data2<-Data
+  #Data2$DOWNLOAD_MIN<- NULL #this is done as we  use KNN Means to classify a new app, whether it will be a spam or not, so initially a new app will have essentially 0 downloads
+  #Data2$DOWNLOAD_MAX<-NULL #this is done as we  use KNN Means to classify a new app, whether it will be a spam or not, so initially a new app will have essentially 0 downloads
+  Data2$spam<-NULL
+  Data2$
+  Data2$Cluster<-km.out$cluster
+
+  tab<-table(Data$spam, Data2$Cluster)
+  tab
+
+  dataframe_tab<-data.frame(tab, names=c("SPAM","CLUSTER")) 
+  dataframe_tab<-data.frame(tab) 
+  nrow(dataframe_tab) 
+  #plot(Data2, col =(km.out$cluster +1) , main="K-Means result", pch=20, cex=k)
+  barplot(as.matrix(tab)/sum(tab),col=c('black'),ylim=c(0, 0.90), main="Barchart of spams in each cluster", xlab="Cluster", ylab="Probability") #distribution of spam apps across clusters
+
+}
+
+for( i in 2:15){
+  metadata_knn(i,180)
+}
+###############################################################
+
+
+#####################################################################################clustering for k =2#######################################
+
+km.out<-kmeans(Data,2, nstart=180)
+  km.out$centers
+  km.out$cluster
+  Data2<-Data
+  #Data2$DOWNLOAD_MIN<- NULL #this is done as we  use KNN Means to classify a new app, whether it will be a spam or not, so initially a new app will have essentially 0 downloads
+  #Data2$DOWNLOAD_MAX<-NULL #this is done as we  use KNN Means to classify a new app, whether it will be a spam or not, so initially a new app will have essentially 0 downloads
+  Data2$spam<-NULL
+  Data2$
+  Data2$Cluster<-km.out$cluster
+  data <- cbind(data, km.out$cluster)
+  #############################################################################################################
+  library(xlsx)
+  write.xlsx(data, "C:/Users/gupta/DataMiningProject/cluster.xlsx")
+  ################################################################################################################
+  tab<-table(Data$spam, Data2$Cluster)
+  tab
+
+  dataframe_tab<-data.frame(tab, names=c("SPAM","CLUSTER")) 
+  dataframe_tab<-data.frame(tab)
+  
+  
+  nrow(dataframe_tab) 
+  #plot(Data2, col =(km.out$cluster +1) , main="K-Means result", pch=20, cex=k)
+  barplot(as.matrix(tab)/sum(tab),col=c('black'),ylim=c(0, 1), main="Barchart of spams in each cluster", xlab="Cluster", ylab="Probability") #distribution of spam apps across clusters
+
+
+#####################################################################################################################################33
+
+###########finding best kmeans with elbow chart#######################
+
+Data2<-Data
+Data2$spam<-NULL
+
+wss <- (nrow(Data2)-1)*sum(apply(Data2,2,var))
+for(i in 2: 15){
+  wss[i] <- sum(kmeans(Data2,centers=i)$withinss)
+  
+}
+plot(1:15, wss, type="b", xlab="Number of Clusters",
+     ylab="Within groups sum of squares",
+     main="Assessing the Optimal Number of Clusters with the Elbow Method",
+     pch=20, cex=2)
+
+
+
+#when we have cleaned the data  we find k is best when 2.
+set.seed(7)
+
+metadata_knn(2,20)
+km2 = kmeans(Data2, 2, nstart=180)
+
+
+ggplot(Data2, col =(km2$cluster) , main="K-Means result with 2 clusters")
+
+
+install.packages("HSAUR")
+library(cluster)
+library(HSAUR)
+data(pottery)
+
+graphics.off()
+ par("mar")
+ par(mar=c(1,1,1,1))
+#ggplot(Data2, col =(km2$cluster) , main="K-Means result with 2 clusters")+ geom_point()
+ 
+ 
+ 
+ #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$showing cluster$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ 
+ ##########################################################################################################
+
+```
+

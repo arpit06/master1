@@ -1,0 +1,7 @@
+select left of hyphen = LEFT(f2, SEARCH("-",f2,1))
+select right of hyphen =RIGHT(F10, (LEN(F10)-SEARCH("-",F10,1)))
+
+remove preceding v from the current version
+=RIGHT([@[CURRENT_VERSION]], LEN([@[CURRENT_VERSION]])-1)
+
+=VALUE(LEFT(K2,1))

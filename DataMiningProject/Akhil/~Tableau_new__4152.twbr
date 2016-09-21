@@ -1,0 +1,2258 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10200.17.0216.1925                               -->
+<workbook source-build='10.2.0 (10200.17.0216.1925)' source-platform='win' version='10.2' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='Tableau_new_0' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' inline='true' name='federated.1dga0iz144igfi13xrqw717lrza4' version='10.2'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='textscan.02o29db1q3m0cv1766ws81d6m49r'>
+            <connection class='textscan' directory='C:/Users/gupta/DataMiningProject' filename='app_metadata_cleaned_removed_min_downloads_above_5m.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.02o29db1q3m0cv1766ws81d6m49r' name='app_metadata_cleaned_removed_min_downloads_above_5m.csv' table='[app_metadata_cleaned_removed_min_downloads_above_5m#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='APP_ID' ordinal='0' />
+            <column datatype='string' name='APP_NAME' ordinal='1' />
+            <column datatype='string' name='CATEGORY' ordinal='2' />
+            <column datatype='real' name='PRICE' ordinal='3' />
+            <column datatype='string' name='CONTENT_RATING' ordinal='4' />
+            <column datatype='string' name='DOWNLOADS' ordinal='5' />
+            <column datatype='integer' name='DOWNLOAD_MIN' ordinal='6' />
+            <column datatype='integer' name='DOWNLOAD_MAX' ordinal='7' />
+            <column datatype='real' name='SIZE_MEGABYTES' ordinal='8' />
+            <column datatype='string' name='CURRENT_VERSION' ordinal='9' />
+            <column datatype='string' name='MIN_REQUIRED_ANDROID' ordinal='10' />
+            <column datatype='integer' name='MIN_REQ_ANDROID_FIRST' ordinal='11' />
+            <column datatype='date' name='LASTUPDATED' ordinal='12' />
+            <column datatype='integer' name='TOTAL_REVIEWS' ordinal='13' />
+            <column datatype='real' name='AVERAGE_RATING' ordinal='14' />
+            <column datatype='integer' name='5RATING' ordinal='15' />
+            <column datatype='integer' name='4RATING' ordinal='16' />
+            <column datatype='integer' name='3RATING' ordinal='17' />
+            <column datatype='integer' name='2RATING' ordinal='18' />
+            <column datatype='integer' name='1RATING' ordinal='19' />
+            <column datatype='string' name='DEVELOPER_SITE' ordinal='20' />
+            <column datatype='string' name='DEVELOPER_CONTACT' ordinal='21' />
+            <column datatype='string' name='DEVELOPER_NAME' ordinal='22' />
+            <column datatype='integer' name='spam' ordinal='23' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>APP_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APP_ID]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>APP_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APP_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APP_NAME]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>APP_NAME</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CATEGORY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CATEGORY]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>CATEGORY</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRICE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PRICE]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>PRICE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTENT_RATING</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTENT_RATING]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>CONTENT_RATING</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DOWNLOADS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DOWNLOADS]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>DOWNLOADS</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DOWNLOAD_MIN</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DOWNLOAD_MIN]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>DOWNLOAD_MIN</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DOWNLOAD_MAX</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DOWNLOAD_MAX]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>DOWNLOAD_MAX</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SIZE_MEGABYTES</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SIZE_MEGABYTES]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>SIZE_MEGABYTES</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CURRENT_VERSION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CURRENT_VERSION]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>CURRENT_VERSION</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MIN_REQUIRED_ANDROID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MIN_REQUIRED_ANDROID]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>MIN_REQUIRED_ANDROID</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MIN_REQ_ANDROID_FIRST</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MIN_REQ_ANDROID_FIRST]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>MIN_REQ_ANDROID_FIRST</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LASTUPDATED</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[LASTUPDATED]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>LASTUPDATED</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_REVIEWS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TOTAL_REVIEWS]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>TOTAL_REVIEWS</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVERAGE_RATING</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVERAGE_RATING]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>AVERAGE_RATING</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>5RATING</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[5RATING]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>5RATING</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>4RATING</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[4RATING]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>4RATING</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>3RATING</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[3RATING]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>3RATING</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2RATING</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2RATING]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>2RATING</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1RATING</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1RATING]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>1RATING</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEVELOPER_SITE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEVELOPER_SITE]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>DEVELOPER_SITE</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEVELOPER_CONTACT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEVELOPER_CONTACT]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>DEVELOPER_CONTACT</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEVELOPER_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEVELOPER_NAME]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>DEVELOPER_NAME</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spam</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[spam]</local-name>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias>spam</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[app_metadata_cleaned_removed_min_downloads_above_5m.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='1Rating' datatype='integer' name='[1RATING]' role='measure' type='quantitative' />
+      <column caption='2Rating' datatype='integer' name='[2RATING]' role='measure' type='quantitative' />
+      <column caption='3Rating' datatype='integer' name='[3RATING]' role='measure' type='quantitative' />
+      <column caption='4Rating' datatype='integer' name='[4RATING]' role='measure' type='quantitative' />
+      <column caption='5Rating' datatype='integer' name='[5RATING]' role='measure' type='quantitative' />
+      <column caption='App Id' datatype='string' name='[APP_ID]' role='dimension' type='nominal' />
+      <column caption='App Name' datatype='string' name='[APP_NAME]' role='dimension' type='nominal' />
+      <column caption='Average Rating' datatype='real' name='[AVERAGE_RATING]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[CATEGORY]' role='dimension' type='nominal' />
+      <column caption='Content Rating' datatype='string' name='[CONTENT_RATING]' role='dimension' type='nominal' />
+      <column caption='Current Version' datatype='string' name='[CURRENT_VERSION]' role='dimension' type='nominal' />
+      <column caption='Min_Revenue' datatype='real' name='[Calculation_292171031520681984]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[DOWNLOAD_MIN]*[PRICE]' />
+      </column>
+      <column caption='Rating' datatype='integer' name='[Calculation_90916422818603010]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[1RATING] +[2RATING] + [3RATING]+[4RATING]+ [5RATING]' />
+      </column>
+      <column caption='Developer Contact' datatype='string' name='[DEVELOPER_CONTACT]' role='dimension' type='nominal' />
+      <column caption='Developer Name' datatype='string' name='[DEVELOPER_NAME]' role='dimension' type='nominal' />
+      <column caption='Developer Site' datatype='string' name='[DEVELOPER_SITE]' role='dimension' type='nominal' />
+      <column caption='Downloads' datatype='string' name='[DOWNLOADS]' role='dimension' type='nominal' />
+      <column caption='Download Max' datatype='integer' name='[DOWNLOAD_MAX]' role='measure' type='quantitative' />
+      <column caption='Download Min' datatype='integer' name='[DOWNLOAD_MIN]' role='measure' type='quantitative' />
+      <column caption='Lastupdated' datatype='date' name='[LASTUPDATED]' role='dimension' type='ordinal' />
+      <column caption='Min Required Android' datatype='string' name='[MIN_REQUIRED_ANDROID]' role='dimension' type='nominal' />
+      <column caption='Min Req Android First' datatype='integer' name='[MIN_REQ_ANDROID_FIRST]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Price' datatype='real' name='[PRICE]' role='measure' type='quantitative' />
+      <column caption='Size Megabytes' datatype='real' name='[SIZE_MEGABYTES]' role='measure' type='quantitative' />
+      <column caption='Total Reviews' datatype='integer' name='[TOTAL_REVIEWS]' role='measure' type='quantitative' />
+      <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+      <column-instance column='[spam]' derivation='Count' name='[cnt:spam:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[1RATING]' derivation='None' name='[none:1RATING:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[2RATING]' derivation='None' name='[none:2RATING:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[1RATING]' derivation='Sum' name='[sum:1RATING:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[2RATING]' derivation='Sum' name='[sum:2RATING:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_292171031520681984]' derivation='Sum' name='[sum:Calculation_292171031520681984:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[spam]' derivation='Sum' name='[sum:spam:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:/Users/gupta/Documents/My Tableau Repository/Datasources/app_metadata_cleaned_removed_min_downloads_above_5m.tde' schema='Extract' tablename='Extract' update-time='05/12/2017 03:46:49 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Calculation_90916422818603010]' formula='[1RATING] +[2RATING] + [3RATING]+[4RATING]+ [5RATING]' />
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='7640' timestamp-start='2017-05-12 03:46:49.026' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>1RATING</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[1RATING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>1RATING</remote-alias>
+              <ordinal>0</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1088</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1670831.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>218.69515706806283</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>17765</statistic>
+                <statistic aggregation='Stdev' datatype='real'>776.83133314081795</statistic>
+                <statistic aggregation='StdevP' datatype='real'>776.78049173017143</statistic>
+                <statistic aggregation='Var' datatype='real'>603466.92014934041</statistic>
+                <statistic aggregation='VarP' datatype='real'>603387.93233256694</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>4975286451.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>2RATING</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[2RATING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>2RATING</remote-alias>
+              <ordinal>1</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>675</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>608313.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>79.622120418848169</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>6146</statistic>
+                <statistic aggregation='Stdev' datatype='real'>264.30959348305947</statistic>
+                <statistic aggregation='StdevP' datatype='real'>264.29229516873204</statistic>
+                <statistic aggregation='Var' datatype='real'>69859.561207180159</statistic>
+                <statistic aggregation='VarP' datatype='real'>69850.417285556177</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>582092359.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>3RATING</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[3RATING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>3RATING</remote-alias>
+              <ordinal>2</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1091</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1772684.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>232.02670157068061</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>27799</statistic>
+                <statistic aggregation='Stdev' datatype='real'>905.44171535344924</statistic>
+                <statistic aggregation='StdevP' datatype='real'>905.3824567575316</statistic>
+                <statistic aggregation='Var' datatype='real'>819824.69990219653</statistic>
+                <statistic aggregation='VarP' datatype='real'>819717.39300430357</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>6673950904.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>4RATING</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[4RATING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>4RATING</remote-alias>
+              <ordinal>3</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1444</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>4400638.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>575.99973821989533</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>69207</statistic>
+                <statistic aggregation='Stdev' datatype='real'>2531.0599645824304</statistic>
+                <statistic aggregation='StdevP' datatype='real'>2530.8943138761056</statistic>
+                <statistic aggregation='Var' datatype='real'>6406264.5443120142</statistic>
+                <statistic aggregation='VarP' datatype='real'>6405426.0280104028</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>51472221190.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>5RATING</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[5RATING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>5RATING</remote-alias>
+              <ordinal>4</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2369</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>18139286.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>2374.2520942408378</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>287325</statistic>
+                <statistic aggregation='Stdev' datatype='real'>10824.863305413895</statistic>
+                <statistic aggregation='StdevP' datatype='real'>10824.154848768259</statistic>
+                <statistic aggregation='Var' datatype='real'>117177665.58089626</statistic>
+                <statistic aggregation='VarP' datatype='real'>117162328.19011341</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>938187425146.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>APP_ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[APP_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>APP_ID</remote-alias>
+              <ordinal>5</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7640</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;addon.simplylock.theme.example&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;x.pandafishing&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>10</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>APP_NAME</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[APP_NAME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>APP_NAME</remote-alias>
+              <ordinal>6</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7590</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;‘Fantasy’ for Camera360&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;永恒战士2-无双战神&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>9</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AVERAGE_RATING</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[AVERAGE_RATING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AVERAGE_RATING</remote-alias>
+              <ordinal>7</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>299</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>30487.96999999999</statistic>
+                <statistic aggregation='Avg' datatype='real'>3.9905719895287945</statistic>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>5.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.95706815202730189</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.95700551462731798</statistic>
+                <statistic aggregation='Var' datatype='real'>0.91597944762495453</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.91585955502709782</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>128661.6061000012</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CATEGORY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CATEGORY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CATEGORY</remote-alias>
+              <ordinal>8</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;ArcadeandAction&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Weather&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CONTENT_RATING</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CONTENT_RATING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CONTENT_RATING</remote-alias>
+              <ordinal>9</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Everyone&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;NotRated&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CURRENT_VERSION</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CURRENT_VERSION]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CURRENT_VERSION</remote-alias>
+              <ordinal>10</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>910</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;(c)2013&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;ZombieCafeAndroid&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7639</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>6</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Calculation_90916422818603010</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Calculation_90916422818603010]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Calculation_90916422818603010</remote-alias>
+              <ordinal>11</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2726</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>26591752.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>3480.5958115183248</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>403796</statistic>
+                <statistic aggregation='Stdev' datatype='real'>14795.849641634792</statistic>
+                <statistic aggregation='StdevP' datatype='real'>14794.881295179901</statistic>
+                <statistic aggregation='Var' datatype='real'>218917166.61786437</statistic>
+                <statistic aggregation='VarP' datatype='real'>218888512.53846413</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1764863376426.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DEVELOPER_CONTACT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DEVELOPER_CONTACT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DEVELOPER_CONTACT</remote-alias>
+              <ordinal>12</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1043</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;00479ec52b4f04a175665c2b501654ecb504c30d&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;ff9c132c53f564124769a59ef3a44b534fbf1e10&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>7</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DEVELOPER_NAME</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DEVELOPER_NAME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DEVELOPER_NAME</remote-alias>
+              <ordinal>13</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>619</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;0035e879fac393ac2c329c4884abfa2cd3f5eda9&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;fffe39af5fb6427a6d1664e445b98ee8bc7cf901&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>5</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DEVELOPER_SITE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DEVELOPER_SITE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DEVELOPER_SITE</remote-alias>
+              <ordinal>14</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1084</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;http://173.224.125.71/index.htm&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;https://www.paypal.co.uk/instore&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>5627</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>8</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DOWNLOADS</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DOWNLOADS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DOWNLOADS</remote-alias>
+              <ordinal>15</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;100 - 500&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;500000 - 1000000&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7632</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DOWNLOAD_MAX</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[DOWNLOAD_MAX]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DOWNLOAD_MAX</remote-alias>
+              <ordinal>16</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>5754365000.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>753189.13612565445</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>5000000</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1540772.5537715151</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1540671.7145715791</statistic>
+                <statistic aggregation='Var' datatype='real'>2373980062455.5962</statistic>
+                <statistic aggregation='VarP' datatype='real'>2373669332080.9292</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='Median' datatype='integer'>50000</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>22468958900400000.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DOWNLOAD_MIN</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[DOWNLOAD_MIN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DOWNLOAD_MIN</remote-alias>
+              <ordinal>17</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1344655450.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>176002.0222513089</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1000000</statistic>
+                <statistic aggregation='Stdev' datatype='real'>320369.99535145174</statistic>
+                <statistic aggregation='StdevP' datatype='real'>320349.02804259385</statistic>
+                <statistic aggregation='Var' datatype='real'>102636933921.48923</statistic>
+                <statistic aggregation='VarP' datatype='real'>102623499767.83458</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='Median' datatype='integer'>10000</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1020705616657500.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LASTUPDATED</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[LASTUPDATED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LASTUPDATED</remote-alias>
+              <ordinal>18</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>957</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2008-11-06#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2014-01-10#</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='Median' datatype='date'>#2013-09-21#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MIN_REQUIRED_ANDROID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MIN_REQUIRED_ANDROID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MIN_REQUIRED_ANDROID</remote-alias>
+              <ordinal>19</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;1&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Varies with device&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MIN_REQ_ANDROID_FIRST</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[MIN_REQ_ANDROID_FIRST]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MIN_REQ_ANDROID_FIRST</remote-alias>
+              <ordinal>20</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>13934.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.8472756197799285</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>4</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.52667652453268843</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.52664161176711144</statistic>
+                <statistic aggregation='Var' datatype='real'>0.27738816149383155</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.27735138724466096</statistic>
+                <statistic aggregation='Count' datatype='integer'>7543</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>27832.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>21</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>7640.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>7640.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PRICE</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PRICE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PRICE</remote-alias>
+              <ordinal>22</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>263</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>3519.759999999942</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.46070157068062068</statistic>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>72.560000000000002</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1.9517736349220611</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1.9516458968653831</statistic>
+                <statistic aggregation='Var' datatype='real'>3.8094203219768752</statistic>
+                <statistic aggregation='VarP' datatype='real'>3.8089217067514856</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>30721.720800000145</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SIZE_MEGABYTES</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[SIZE_MEGABYTES]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SIZE_MEGABYTES</remote-alias>
+              <ordinal>23</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>304</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>64109.200000000063</statistic>
+                <statistic aggregation='Avg' datatype='real'>8.6295867546103189</statistic>
+                <statistic aggregation='Min' datatype='real'>0.01</statistic>
+                <statistic aggregation='Max' datatype='real'>937.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>31.903958347145423</statistic>
+                <statistic aggregation='StdevP' datatype='real'>31.901811016949679</statistic>
+                <statistic aggregation='Var' datatype='real'>1017.8625582163901</statistic>
+                <statistic aggregation='VarP' datatype='real'>1017.7255461611719</statistic>
+                <statistic aggregation='Count' datatype='integer'>7429</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>8113918.9856000105</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TOTAL_REVIEWS</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[TOTAL_REVIEWS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TOTAL_REVIEWS</remote-alias>
+              <ordinal>24</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2726</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>26591752.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>3480.5958115183248</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>403796</statistic>
+                <statistic aggregation='Stdev' datatype='real'>14795.849641634792</statistic>
+                <statistic aggregation='StdevP' datatype='real'>14794.881295179901</statistic>
+                <statistic aggregation='Var' datatype='real'>218917166.61786437</statistic>
+                <statistic aggregation='VarP' datatype='real'>218888512.53846413</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1764863376426.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>spam</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[spam]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>spam</remote-alias>
+              <ordinal>25</ordinal>
+              <family>app_metadata_cleaned_removed_min_downloads_above_5m.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>551.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.072120418848167542</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.25870412486032884</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.25868719340804719</statistic>
+                <statistic aggregation='Var' datatype='real'>0.066927824219748619</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.06691906403333242</statistic>
+                <statistic aggregation='Count' datatype='integer'>7640</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>551.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.428571' measure-ordering='alphabetic' measure-percentage='0.571429' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:Calculation_292171031520681984:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]:1&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[none:2RATING:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:2RATING:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[none:1RATING:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:1RATING:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='ContentRating_wise_Spam'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Content rating wise spam</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='Content Rating' datatype='string' name='[CONTENT_RATING]' role='dimension' type='nominal' />
+            <column-instance column='[spam]' derivation='Count' name='[cnt:spam:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CONTENT_RATING]' derivation='None' name='[none:CONTENT_RATING:nk]' pivot='key' type='nominal' />
+            <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+            <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Sum' name='[sum:spam:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' field-type='quantitative' max='4500' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' num-steps='5' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' />
+            </encodings>
+          </pane>
+          <pane id='2' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk] + [federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk])</rows>
+        <cols>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CONTENT_RATING:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Downloads_wise_Spam'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>downloads vs spam</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='Downloads' datatype='string' name='[DOWNLOADS]' role='dimension' type='nominal' />
+            <column-instance column='[spam]' derivation='Count' name='[cnt:spam:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DOWNLOADS]' derivation='None' name='[none:DOWNLOADS:nk]' pivot='key' type='nominal' />
+            <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+            <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Sum' name='[sum:spam:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' field-type='quantitative' fold='true' major-show='false' scope='rows' synchronized='true' type='space' />
+            <format attr='subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' num-steps='5' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' />
+            </encodings>
+          </pane>
+          <pane id='2' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='88' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk] + [federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk])</rows>
+        <cols>[federated.1dga0iz144igfi13xrqw717lrza4].[none:DOWNLOADS:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='MinReqAndroid_wise_Spam'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Min_Required_Android vs spam</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='Min Req Android First' datatype='integer' name='[MIN_REQ_ANDROID_FIRST]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Count' name='[cnt:spam:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MIN_REQ_ANDROID_FIRST]' derivation='None' name='[none:MIN_REQ_ANDROID_FIRST:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+            <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Sum' name='[sum:spam:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' field-type='quantitative' fold='true' major-show='false' minor-show='false' scope='rows' synchronized='true' type='space' />
+            <format attr='subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' num-steps='5' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' />
+            </encodings>
+          </pane>
+          <pane id='2' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='93' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk] + [federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk])</rows>
+        <cols>[federated.1dga0iz144igfi13xrqw717lrza4].[none:MIN_REQ_ANDROID_FIRST:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Rating in terms of spam</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='1Rating' datatype='integer' name='[1RATING]' role='measure' type='quantitative' />
+            <column caption='2Rating' datatype='integer' name='[2RATING]' role='measure' type='quantitative' />
+            <column caption='3Rating' datatype='integer' name='[3RATING]' role='measure' type='quantitative' />
+            <column caption='4Rating' datatype='integer' name='[4RATING]' role='measure' type='quantitative' />
+            <column caption='5Rating' datatype='integer' name='[5RATING]' role='measure' type='quantitative' />
+            <column caption='Average Rating' datatype='real' name='[AVERAGE_RATING]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Count' name='[cnt:spam:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AVERAGE_RATING]' derivation='None' name='[none:AVERAGE_RATING:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+            <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+            <column-instance column='[1RATING]' derivation='Sum' name='[sum:1RATING:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[2RATING]' derivation='Sum' name='[sum:2RATING:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[3RATING]' derivation='Sum' name='[sum:3RATING:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[4RATING]' derivation='Sum' name='[sum:4RATING:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[5RATING]' derivation='Sum' name='[sum:5RATING:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AVERAGE_RATING]' derivation='Sum' name='[sum:AVERAGE_RATING:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[spam]' derivation='Sum' name='[sum:spam:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:1RATING:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:2RATING:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:3RATING:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:4RATING:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:5RATING:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dga0iz144igfi13xrqw717lrza4].[sum:AVERAGE_RATING:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' num-steps='5' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='8'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='9' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' />
+            </encodings>
+          </pane>
+          <pane id='10' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='96' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk] + [federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk])</rows>
+        <cols>[federated.1dga0iz144igfi13xrqw717lrza4].[none:AVERAGE_RATING:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='Category' datatype='string' name='[CATEGORY]' role='dimension' type='nominal' />
+            <column caption='Min Req Android First' datatype='integer' name='[MIN_REQ_ANDROID_FIRST]' role='measure' type='quantitative' />
+            <column-instance column='[CATEGORY]' derivation='None' name='[none:CATEGORY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MIN_REQ_ANDROID_FIRST]' derivation='None' name='[none:MIN_REQ_ANDROID_FIRST:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+            <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Sum' name='[sum:spam:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]' direction='DESC' using='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' num-steps='5' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' num-steps='5' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' x-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[none:MIN_REQ_ANDROID_FIRST:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' x-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk] * [federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk])</rows>
+        <cols>([federated.1dga0iz144igfi13xrqw717lrza4].[none:MIN_REQ_ANDROID_FIRST:qk] + [federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Category wise total number of apps</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='Category' datatype='string' name='[CATEGORY]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[CATEGORY]' derivation='None' name='[none:CATEGORY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]' direction='DESC' using='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:Number of Records:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1dga0iz144igfi13xrqw717lrza4].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='Category' datatype='string' name='[CATEGORY]' role='dimension' type='nominal' />
+            <column caption='Min_Revenue' datatype='real' name='[Calculation_292171031520681984]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[DOWNLOAD_MIN]*[PRICE]' />
+            </column>
+            <column caption='Download Min' datatype='integer' name='[DOWNLOAD_MIN]' role='measure' type='quantitative' />
+            <column caption='Price' datatype='real' name='[PRICE]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Count' name='[cnt:spam:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CATEGORY]' derivation='None' name='[none:CATEGORY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+            <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_292171031520681984]' derivation='Sum' name='[sum:Calculation_292171031520681984:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>1</max>
+          </filter>
+          <slices>
+            <column>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]' value='28' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:Calculation_292171031520681984:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='183' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='106' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1dga0iz144igfi13xrqw717lrza4].[sum:Calculation_292171031520681984:qk] + [federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk])</rows>
+        <cols>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='category_wise_Spam'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>category wise spam</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='app_metadata_cleaned_removed_min_downloads_above_5m' name='federated.1dga0iz144igfi13xrqw717lrza4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dga0iz144igfi13xrqw717lrza4'>
+            <column caption='Category' datatype='string' name='[CATEGORY]' role='dimension' type='nominal' />
+            <column-instance column='[spam]' derivation='Count' name='[cnt:spam:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CATEGORY]' derivation='None' name='[none:CATEGORY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[spam]' derivation='None' name='[none:spam:qk]' pivot='key' type='quantitative' />
+            <column caption='Spam' datatype='integer' name='[spam]' role='measure' type='quantitative' />
+            <column-instance column='[spam]' derivation='Sum' name='[sum:spam:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]' direction='DESC' using='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' field-type='quantitative' fold='true' major-show='false' minor-show='false' scope='rows' synchronized='true' type='space' />
+            <encoding attr='space' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' field-type='quantitative' max='2000' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]' scope='rows' value='true' />
+            <format attr='subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' num-steps='5' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='1' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' y-axis-name='[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#75a1c7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk] + [federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk])</rows>
+        <cols>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='900' maxwidth='1400' minheight='900' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='51250' id='7' name='Downloads_wise_Spam' w='51900' x='900' y='1000' />
+        <zone h='49000' id='8' name='MinReqAndroid_wise_Spam' w='50200' x='900' y='51375' />
+        <zone h='49500' id='9' name='category_wise_Spam' w='45000' x='54700' y='1250' />
+        <zone h='48250' id='10' name='Sheet 5' w='45400' x='54300' y='51500' />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='ContentRating_wise_Spam'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' type='color' />
+            <card param='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' type='highlighter' />
+            <card pane-specification-id='1' param='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CONTENT_RATING:nk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='category_wise_Spam'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[sum:spam:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Downloads_wise_Spam'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' type='color' />
+            <card pane-specification-id='1' param='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:DOWNLOADS:nk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='MinReqAndroid_wise_Spam'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' type='color' />
+            <card pane-specification-id='1' param='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <axis>[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:spam:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:MIN_REQUIRED_ANDROID:nk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='37'>
+            <card type='columns' />
+          </strip>
+          <strip size='37'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' show-morefewerbutton='false' type='filter' />
+            <card pane-specification-id='9' param='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[cnt:Calculation_90916422818603010:qk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:3RATING:qk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Downloads_wise_Spam'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='MinReqAndroid_wise_Spam'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='category_wise_Spam'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='9' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:MIN_REQ_ANDROID_FIRST:qk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='1' param='[federated.1dga0iz144igfi13xrqw717lrza4].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:CATEGORY:nk]</field>
+            <field>[federated.1dga0iz144igfi13xrqw717lrza4].[none:spam:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+</workbook>

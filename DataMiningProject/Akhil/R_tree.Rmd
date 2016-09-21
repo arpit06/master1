@@ -1,0 +1,179 @@
+---
+title: "Untitled"
+author: "Akhil Gupta"
+date: "May 10, 2017"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r}
+#install.packages("plotly")
+library(shiny)
+library(dummies) 
+library(ggplot2) 
+library(caret) 
+## Loading required package: lattice 
+library(MASS) 
+library(tree) 
+library(ISLR) 
+library(cluster) 
+library(fpc) 
+library(arules) 
+library(arulesViz)
+library(GGally)
+
+getwd();
+setwd("C:/Users/gupta/DataMiningProject")
+#data<-read.csv(file="app_metadata_cleaned.csv", header=TRUE)
+data<-read.csv(file="app_metadata_cleaned_removed_min_downloads_above_5m.csv", header=TRUE)
+summary(data)
+
+
+library(mice)
+
+num.vars <- sapply(data, is.numeric)
+
+#data[num.vars] <- lapply(data[num.vars], scale)  #scale the dataset
+
+Data <- data
+
+Data$APP_ID <- NULL
+Data$APP_NAME <- NULL
+Data$DOWNLOADS <- NULL
+Data$CURRENT_VERSION <- NULL
+Data$LASTUPDATED <- NULL
+Data$DEVELOPER_SITE <- NULL
+Data$DEVELOPER_CONTACT <- NULL
+Data$DEVELOPER_NAME <- NULL
+Data$MIN_REQUIRED_ANDROID <- NULL
+
+
+Data$CATEGORY <- as.factor(Data$CATEGORY)
+Data$PRICE <- as.numeric(Data$PRICE)
+Data$CONTENT_RATING <- as.factor(Data$CONTENT_RATING)
+Data$DOWNLOAD_MIN <- as.numeric(Data$DOWNLOAD_MIN)
+Data$DOWNLOAD_MAX <- as.numeric(Data$DOWNLOAD_MAX)
+Data$SIZE_MEGABYTES <- as.numeric(Data$SIZE_MEGABYTES)
+Data$MIN_REQ_ANDROID_FIRST <- as.factor(Data$MIN_REQ_ANDROID_FIRST)
+Data$TOTAL_REVIEWS <- as.numeric(Data$TOTAL_REVIEWS)
+Data$AVERAGE_RATING <- as.numeric(Data$AVERAGE_RATING)
+Data$X5RATING <- as.numeric(Data$X5RATING)
+Data$X4RATING <- as.numeric(Data$X4RATING)
+Data$X3RATING <- as.numeric(Data$X3RATING)
+Data$X2RATING <- as.numeric(Data$X2RATING)
+Data$X1RATING <- as.numeric(Data$X1RATING)
+Data$spam <- as.factor(Data$spam)
+
+Data <- dummy.data.frame(Data, sep = ".", names = c("CATEGORY","CONTENT_RATING","MIN_REQ_ANDROID_FIRST"))
+#attach(Data)
+
+set.seed(12345)
+
+df_new <- dummy.data.frame(df, names = c("CATEGORY","CONTENT_RATING","MIN_REQ_ANDROID_FIRST"), sep = ".")
+
+train_ind<-sample(nrow(Data),0.7*nrow(Data))
+train <- Data[train_ind,]
+test <- Data[-train_ind,]
+nrow(train)
+nrow(test)
+#View(test)
+
+########################UNDERSAMPLING###########################
+
+#Taking all the observations with dependent variable = 1
+train_under <- train[train$spam==1,]
+
+#Randomly select observations with dependent variable = 0
+zeroObs <- train[train$spam==0,]
+set.seed(123457)
+rearrangedZeroObs <-  zeroObs[sample(nrow(zeroObs), length(train_under$spam)),]
+
+#Appending rows of randomly selected 0s in our undersampled data frame
+train_under <- rbind(train_under, rearrangedZeroObs)
+
+colnames(train_under)[which(names(train_under) == "CATEGORY.Arcade and Action")] <- "CATEGORY.ArcadeandAction"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Books & Reference")] <- "CATEGORY.BooksReference"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Brain and Puzzle")] <- "CATEGORY.BrainandPuzzle"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Cards and Casino")] <- "CATEGORY.CardsandCasino"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Health & Fitness")] <- "CATEGORY.HealthFitness"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Libraries & Demo")] <- "CATEGORY.LibrariesDemo"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Media & Video")] <- "CATEGORY.MediaVideo"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Music & Audio")] <- "CATEGORY.MusicAudio"
+colnames(train_under)[which(names(train_under) == "CATEGORY.News & Magazines")] <- "CATEGORY.NewsMAgazines"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Sports Games")] <- "CATEGORY.SportsGames"
+colnames(train_under)[which(names(train_under) == "CATEGORY.Travel & Local")] <- "CATEGORY.TravelLocal"
+colnames(train_under)[which(names(train_under) == "CONTENT_RATING.High Maturity")] <- "CONTENT_RATING.HighMaturity"
+colnames(train_under)[which(names(train_under) == "CONTENT_RATING.Low Maturity")] <- "CONTENT_RATING.LowMaturity"
+colnames(train_under)[which(names(train_under) == "CONTENT_RATING.Medium Maturity")] <- "CONTENT_RATING.MediumMaturity"
+colnames(train_under)[which(names(train_under) == "CONTENT_RATING.Not rated")] <- "CONTENT_RATING.Notrated"
+colnames(train_under)[which(names(train_under) == "MIN_REQ_ANDROID_FIRST.Varies with device")] <- "MIN_REQ_ANDROID_FIRST.Varieswithdevice"
+
+str(train_under)
+
+
+###########################classification treee ################################
+
+#treedata<-tree(factor(train_under$spam)~., data=train_under)
+#summary(treedata)
+
+#plot(treedata) 
+#text(treedata, pretty=0)
+
+
+#pruned tree
+#set.seed(1) 
+#cv.data=cv.tree(treedata,FUN=prune.misclass, K=10) 
+#names(cv.data)
+#plot(cv.data)
+
+#k =9 is the best value for the pruned tree
+#cv.data
+
+#prune.data1=prune.misclass(treedata,best=8) 
+#plot(prune.data1) 
+#text(prune.data1,pretty=0)
+
+
+#confusion matrix for the pruned tree
+
+#tree.pred=predict(prune.data1,test,type="class") 
+#cm_prune<-table(test$spam,tree.pred) 
+#cm_prune
+
+#nrow(test)
+#sum(as.numeric(test$spam==1))
+
+#accuracy_tree= (cm_prune[1,1]+cm_prune[2,2])/sum(cm_prune)
+#accuracy_tree
+###################################################################
+
+#########################Association Rule########################################
+Data$MIN_REQ_ANDROID_FIRST <- as.factor(Data$MIN_REQ_ANDROID_FIRST)
+Data1<-Data[c("CATEGORY","CONTENT_RATING","MIN_REQ_ANDROID_FIRST","spam")]
+Data2<-dummy.data.frame(Data1, names=c(""))
+Data3<-data.frame(sapply(Data1, as.numeric))
+Data1$MIN_REQ_ANDROID_FIRST <- as.factor(Data$MIN_REQ_ANDROID_FIRST)
+Data1$CATEGORY <- as.factor(Data$CATEGORY)
+Data1$CONTENT_RATING <- as.factor(Data$CONTENT_RATING)
+Data1$spam <- as.factor(Data$spam)
+#rules<-apriori(Data1, parameter=list(supp=.01, conf=.1),appearance =list(default="lhs",rhs="spam=1"), control=list(verbose=F))
+rules<-apriori(Data1, parameter=list(supp=.001, conf=.1),appearance =list(default="lhs",rhs="spam=1"), control=list(verbose=F))
+
+rules<-sort(rules ,decreasing=TRUE,by="confidence") 
+inspect(rules[1:5])
+
+library(arulesViz)
+plot(rules,measure=c("confidence","support"),shading="lift")
+
+plot(rules, method="matrix3D" ,measure="lift", shading="confidence")
+
+#################################################################################
+
+
+
+
+
+
+```
+

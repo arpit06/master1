@@ -1,0 +1,70 @@
+---
+title: "Untitled"
+author: "Akhil Gupta"
+date: "May 10, 2017"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+
+
+library(shiny)
+library(dummies) 
+library(ggplot2) 
+library(caret) 
+## Loading required package: lattice 
+library(MASS) 
+library(tree) 
+library(ISLR) 
+library(cluster) 
+library(fpc) 
+library(arules) 
+library(arulesViz)
+
+getwd();
+setwd("C:/Users/gupta/DataMiningProject")
+#data<-read.csv(file="app_metadata_cleaned.csv", header=TRUE)
+data<-read.csv(file="app_metadata_cleaned_removed_min_downloads_above_5m.csv", header=TRUE)
+summary(data)
+
+data$CATEGORY <- as.factor(data$CATEGORY)
+data$PRICE <- as.numeric(data$PRICE)
+data$CONTENT_RATING <- as.factor(data$CONTENT_RATING)
+data$DOWNLOAD_MIN <- as.numeric(data$DOWNLOAD_MIN)
+data$DOWNLOAD_MAX <- as.numeric(data$DOWNLOAD_MAX)
+data$SIZE_MEGABYTES <- as.numeric(data$SIZE_MEGABYTES)
+data$MIN_REQ_ANDROID_FIRST <- as.factor(data$MIN_REQ_ANDROID_FIRST)
+data$TOTAL_REVIEWS <- as.numeric(data$TOTAL_REVIEWS)
+data$AVERAGE_RATING <- as.numeric(data$AVERAGE_RATING)
+data$X5RATING <- as.numeric(data$X5RATING)
+data$X4RATING <- as.numeric(data$X4RATING)
+data$X3RATING <- as.numeric(data$X3RATING)
+data$X2RATING <- as.numeric(data$X2RATING)
+data$X1RATING <- as.numeric(data$X1RATING)
+data$spam <- as.factor(data$spam)
+
+library(mice)
+
+num.vars <- sapply(data, is.numeric)
+
+#data[num.vars] <- lapply(data[num.vars], scale)  #scale the dataset
+
+Data <- data
+
+Data$APP_ID <- NULL
+Data$APP_NAME <- NULL
+Data$DOWNLOADS <- NULL
+Data$CURRENT_VERSION <- NULL
+Data$LASTUPDATED <- NULL
+Data$DEVELOPER_SITE <- NULL
+Data$DEVELOPER_CONTACT <- NULL
+Data$DEVELOPER_NAME <- NULL
+Data$MIN_REQUIRED_ANDROID <- NULL
+
+
+
+
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
