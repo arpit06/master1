@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff View</title>
+</head>
+<body>
+<h1>Staff</h1>
+
+<ul>
+    {% for Staff in object_list %}
+    <li>{{ Staff.FirstName }}
+        <a href="{% url 'update-staff' Staff.StaffId %}">Edit</a>
+        <a href="{% url 'delete-staff' Staff.StaffId %}">Delete</a>
+
+
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

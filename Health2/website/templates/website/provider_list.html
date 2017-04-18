@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Provider View</title>
+</head>
+<body>
+<h1>Providers</h1>
+
+<ul>
+    {% for Provider in object_list %}
+    <li>{{ Provider.ProviderName }}
+        <a href="{% url 'update-provider' Provider.ProviderID %}">Edit</a>
+        <a href="{% url 'delete-provider' Provider.ProviderID %}">Delete</a>
+
+
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

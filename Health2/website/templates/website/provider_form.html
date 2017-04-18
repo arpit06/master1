@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2><center>Provider Creation Page</center></h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <label><center>{{field.label_tag}}</center></label>
+    <center>{{field}}</center><br>
+
+    {% endfor %}
+    <center><button type="submit">Submit</button></center>
+</form>
+
+</body>
+</html>
